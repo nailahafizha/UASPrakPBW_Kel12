@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Dashboard - MedWaste
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="user-theme">
+  <div class="layout">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="logo">
+      MW
+     </div>
+     <div>
+      <h2 data-user-name="">
+       Pengguna
+      </h2>
+      <small>
+       MedWaste
+      </small>
+     </div>
+    </div>
+    <nav class="nav">
+     <a class="active" href="dashboard.html">
+      Dashboard
+     </a>
+     <a href="edukasi.html">
+      Edukasi
+     </a>
+     <a href="penyerahan.html">
+      Pengajuan
+     </a>
+     <a href="riwayat.html">
+      Riwayat
+     </a>
+     <a href="profil.html">
+      Profil
+     </a>
+    </nav>
+    <a class="btn btn-light logout" data-logout="" href="login.html">
+     Logout
+    </a>
+   </aside>
+   <main class="main dashboard-main">
+    <header class="dashboard-heading">
+     <h1>
+      Halo,
+      <span data-user-first-name="">
+      </span>
+      <span aria-hidden="true">
+       👋
+      </span>
+     </h1>
+     <p>
+      Kelola penyerahan limbah medis rumah tangga dengan aman dan mudah.
+     </p>
+    </header>
+    <section class="hero dashboard-hero">
+     <div class="hero-content">
+      <h2>
+       Buang limbah medis rumah tangga dengan aman
+      </h2>
+      <p>
+       Kenali jenis limbah, pilih lokasi penerima yang sesuai, buat jadwal penyerahan, dan pantau status pengajuanmu.
+      </p>
+      <div class="hero-actions">
+       <a class="btn hero-btn-primary" href="penyerahan.html">
+        Buat Pengajuan
+       </a>
+       <a class="btn hero-btn-secondary" href="riwayat.html">
+        Lihat Riwayat
+       </a>
+      </div>
+     </div>
+     <div aria-hidden="true" class="hero-symbol">
+      ♻️
+     </div>
+    </section>
+    <section class="grid grid-2 dashboard-features">
+     <a class="card feature-card" href="edukasi.html">
+      <div class="feature-icon">
+       📘
+      </div>
+      <div>
+       <h3>
+        Edukasi
+       </h3>
+       <p>
+        Baca panduan aman untuk menangani obat kedaluwarsa, masker bekas, dan benda tajam medis.
+       </p>
+      </div>
+      <span class="card-link">
+       Pelajari panduan &rarr;
+      </span>
+     </a>
+     <a class="card feature-card" href="penyerahan.html">
+      <div class="feature-icon">
+       📦
+      </div>
+      <div>
+       <h3>
+        Penyerahan Limbah
+       </h3>
+       <p>
+        Pilih jenis limbah, lokasi penerima, jumlah, dan jadwal penyerahan dalam satu formulir.
+       </p>
+      </div>
+      <span class="card-link">
+       Buat pengajuan &rarr;
+      </span>
+     </a>
+    </section>
+    <div class="section-heading">
+     <div>
+      <h2>
+       Jenis Limbah
+      </h2>
+      <p>
+       Gunakan kategori berikut agar limbah diarahkan ke lokasi penerima yang tepat.
+      </p>
+     </div>
+    </div>
+    <section class="grid grid-3 waste-grid">
+     <div class="card waste-card">
+      <span class="waste-icon">
+       💉
+      </span>
+      <h3>
+       Sharps
+      </h3>
+      <p>
+       Jarum suntik, lancet, ampul pecah, dan benda medis tajam lainnya.
+      </p>
+     </div>
+     <div class="card waste-card">
+      <span class="waste-icon">
+       🟡
+      </span>
+      <h3>
+       Limbah Padat Infeksius
+      </h3>
+      <p>
+       Masker, sarung tangan, perban, kasa, kapas, swab, dan alat tes bekas yang terkontaminasi.
+      </p>
+     </div>
+     <div class="card waste-card">
+      <span class="waste-icon">
+       💊
+      </span>
+      <h3>
+       Limbah Farmasi
+      </h3>
+      <p>
+       Obat kedaluwarsa, sisa obat, serta kemasan obat tertentu.
+      </p>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="../../js/data.js">
+  </script>
+  <script src="../../js/auth.js">
+  </script>
+  <script src="../../js/user.js">
+  </script>
+ </body>
+</html>
