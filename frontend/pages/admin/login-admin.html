@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Admin - MedWaste</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="auth-page admin-theme">
+  <main class="auth-card">
+    <div class="brand auth-brand">
+      <div class="logo">MW</div>
+      <div>
+        <h1>MedWaste</h1>
+        <p class="subtitle">Login sebagai admin</p>
+      </div>
+    </div>
+
+    <form data-auth="admin-login">
+      <div class="form-group">
+        <label>Email Admin</label>
+        <input name="email" type="email" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input name="password" type="password" required>
+      </div>
+      <button class="btn btn-brown btn-full">Login Admin</button>
+    </form>
+
+    <div class="auth-links admin-auth-links">
+      <a href="../user/login.html">Login user</a>
+    </div>
+  </main>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Kelola Lokasi - MedWaste
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="admin-theme">
+  <div class="layout">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="logo">
+      MW
+     </div>
+     <div>
+      <h2>
+       Admin
+      </h2>
+      <small>
+       MedWaste
+      </small>
+     </div>
+    </div>
+    <nav class="nav">
+     <a href="dashboard.html">
+      Dashboard
+     </a>
+     <a href="penyerahan.html">
+      Kelola Penyerahan
+     </a>
+     <a class="active" href="lokasi.html">
+      Kelola Lokasi
+     </a>
+     <a href="edukasi.html">
+      Kelola Edukasi
+     </a>
+    </nav>
+    <a class="btn btn-light logout" data-logout="" href="login-admin.html">
+     Logout
+    </a>
+   </aside>
+   <main class="main">
+    <div class="simple-topbar topbar">
+     <h1>
+      Kelola Lokasi Penerima
+     </h1>
+    </div>
+    <section class="card">
+     <h3>
+      Tambah / Edit Lokasi
+     </h3>
+     <form id="locationForm">
+      <input id="locId" type="hidden"/>
+      <div class="grid grid-2">
+       <div class="form-group">
+        <label>
+         Nama Lokasi
+        </label>
+        <input id="locNama" required=""/>
+       </div>
+       <div class="form-group">
+        <label>
+         Nomor Telepon
+        </label>
+        <input id="locTelepon" placeholder="Contoh: 0812-3456-7890" inputmode="numeric" pattern="[0-9]*" required=""/>
+       </div>
+       <div class="form-group">
+        <label>
+         Alamat
+        </label>
+        <input id="locAlamat" required=""/>
+       </div>
+       <div class="form-group">
+        <label>
+         Hari Operasional
+        </label>
+        <div class="multi-select" id="locHariDropdown">
+         <button class="multi-select-toggle" type="button" id="locHariToggle">
+          <span id="locHariText">Pilih hari operasional</span>
+          <span aria-hidden="true">▾</span>
+         </button>
+         <div class="multi-select-menu" id="locHariGroup">
+          <label><input name="locHari" type="checkbox" value="Senin"/> Senin</label>
+          <label><input name="locHari" type="checkbox" value="Selasa"/> Selasa</label>
+          <label><input name="locHari" type="checkbox" value="Rabu"/> Rabu</label>
+          <label><input name="locHari" type="checkbox" value="Kamis"/> Kamis</label>
+          <label><input name="locHari" type="checkbox" value="Jumat"/> Jumat</label>
+          <label><input name="locHari" type="checkbox" value="Sabtu"/> Sabtu</label>
+          <label><input name="locHari" type="checkbox" value="Minggu"/> Minggu</label>
+         </div>
+        </div>
+       </div>
+       <div class="time-row">
+        <div class="form-group">
+         <label>
+          Jam Buka
+         </label>
+         <input id="locJamBuka" required="" type="time"/>
+        </div>
+        <div class="form-group">
+         <label>
+          Jam Tutup
+         </label>
+         <input id="locJamTutup" required="" type="time"/>
+        </div>
+       </div>
+       <div class="form-group">
+        <label>
+         Batas Pemilihan Jadwal
+        </label>
+        <div class="input-suffix">
+         <input id="locBatas" min="1" required="" type="number" value="14"/>
+         <span>
+          hari ke depan
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="form-group">
+       <label>
+        Jenis Limbah yang Diterima
+       </label>
+       <div class="checkbox-grid" id="locTypes">
+       </div>
+       <small class="field-help">
+        Pilih minimal satu jenis limbah.
+       </small>
+      </div>
+      <button class="btn btn-primary">
+       Simpan Lokasi
+      </button>
+     </form>
+    </section>
+    <section class="card table-card">
+     <div class="section-head-inline">
+      <div>
+       <h3>
+        Daftar Lokasi Penerima
+       </h3>
+       <p>
+        Kelola lokasi yang tersedia untuk penyerahan limbah medis rumah tangga.
+       </p>
+      </div>
+     </div>
+     <div class="table-wrap inner-table">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Nama Lokasi
+         </th>
+         <th>
+          Alamat
+         </th>
+         <th>
+          Telepon
+         </th>
+         <th>
+          Jenis Limbah
+         </th>
+         <th>
+          Operasional
+         </th>
+         <th>
+          Aksi
+         </th>
+        </tr>
+       </thead>
+       <tbody id="locationBody">
+       </tbody>
+      </table>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script src="../../js/data.js">
+  </script>
+  <script src="../../js/auth.js">
+  </script>
+  <script src="../../js/admin.js">
+  </script>
+ </body>
+</html>

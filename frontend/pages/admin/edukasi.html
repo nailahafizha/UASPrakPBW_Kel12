@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelola Edukasi - MedWaste</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="admin-theme">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">MW</div>
+        <div>
+          <h2>Admin</h2>
+          <small>MedWaste</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="penyerahan.html">Kelola Penyerahan</a>
+        <a href="lokasi.html">Kelola Lokasi</a>
+        <a class="active" href="edukasi.html">Kelola Edukasi</a>
+      </nav>
+      <a class="btn btn-light logout" href="login-admin.html" data-logout>Logout</a>
+    </aside>
+
+    <main class="main">
+      <div class="topbar simple-topbar">
+        <h1>Kelola Edukasi</h1>
+      </div>
+      <section class="card admin-form-card">
+        <h3>Tambah / Edit Artikel</h3>
+        <form id="articleForm">
+          <input type="hidden" id="articleId">
+          <div class="grid grid-2">
+            <div class="form-group">
+              <label>Judul</label>
+              <input id="articleJudul" required>
+            </div>
+            <div class="form-group">
+              <label>Kategori</label>
+              <select id="articleKategori" data-category-select required></select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Isi Artikel</label>
+            <textarea id="articleIsi" required></textarea>
+          </div>
+          <button class="btn btn-brown">Simpan Artikel</button>
+        </form>
+      </section>
+
+      <section class="card table-card">
+        <div class="section-head-inline">
+          <div>
+            <h3>Daftar Artikel</h3>
+            <p>Kelola artikel edukasi yang tampil pada halaman pengguna.</p>
+          </div>
+          <div class="form-group compact-filter">
+            <label>Filter Kategori</label>
+            <select id="articleFilter" data-category-select></select>
+          </div>
+        </div>
+        <div class="table-wrap inner-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Judul</th>
+                <th>Kategori</th>
+                <th>Isi Artikel</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="articleBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/admin.js"></script>
+</body>
+</html>
