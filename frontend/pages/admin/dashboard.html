@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - MedWaste</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="admin-theme">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">MW</div>
+        <div>
+          <h2>Admin</h2>
+          <small>MedWaste</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="penyerahan.html">Kelola Penyerahan</a>
+        <a href="lokasi.html">Kelola Lokasi</a>
+        <a href="edukasi.html">Kelola Edukasi</a>
+      </nav>
+      <a class="btn btn-light logout" href="login-admin.html" data-logout>Logout</a>
+    </aside>
+
+    <main class="main admin-dashboard">
+      <header class="page-header">
+        <h1>Dashboard Admin</h1>
+        <p>Ringkasan untuk melihat jumlah pengajuan, progres penyerahan, dan jenis limbah yang paling sering dilaporkan.</p>
+      </header>
+
+      <section class="grid grid-4 stats compact-stats">
+        <div class="card">
+          <p>Total User</p>
+          <strong id="totalUser">0</strong>
+        </div>
+        <div class="card">
+          <p>Total Pengajuan</p>
+          <strong id="totalPengajuan">0</strong>
+        </div>
+        <div class="card">
+          <p>Menunggu Diproses</p>
+          <strong id="totalMenunggu">0</strong>
+        </div>
+        <div class="card">
+          <p>Lokasi Penerima</p>
+          <strong id="totalLokasi">0</strong>
+        </div>
+      </section>
+
+      <section class="grid grid-2 dashboard-panels">
+        <div class="card">
+          <h3>Grafik Jenis Limbah</h3>
+          <p>Bar ini menunjukkan jumlah pengajuan berdasarkan kategori limbah.</p>
+          <div class="horizontal-chart" id="wasteChart"></div>
+        </div>
+        <div class="card">
+          <h3>Ringkasan Status</h3>
+          <p>Memantau tahapan penyerahan yang sedang berjalan.</p>
+          <div class="status-summary" id="statusSummary"></div>
+        </div>
+      </section>
+
+      <section class="card recent-panel">
+        <div class="section-head-inline">
+          <div>
+            <h3>Pengajuan Terbaru</h3>
+            <p>Daftar laporan terbaru yang masuk ke sistem.</p>
+          </div>
+          <a class="btn btn-light" href="penyerahan.html">Kelola Penyerahan</a>
+        </div>
+        <div id="recentSubmissions" class="recent-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/admin.js"></script>
+</body>
+</html>
