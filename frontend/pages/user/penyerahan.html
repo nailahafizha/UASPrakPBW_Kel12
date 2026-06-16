@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+  <title>
+   Penyerahan Limbah - MedWaste
+  </title>
+  <link href="../../css/style.css" rel="stylesheet"/>
+ </head>
+ <body class="user-theme">
+  <div class="layout">
+   <aside class="sidebar">
+    <div class="brand">
+     <div class="logo">
+      MW
+     </div>
+     <div>
+      <h2 data-user-name="">
+       Pengguna
+      </h2>
+      <small>
+       MedWaste
+      </small>
+     </div>
+    </div>
+    <nav class="nav">
+     <a href="dashboard.html">
+      Dashboard
+     </a>
+     <a href="edukasi.html">
+      Edukasi
+     </a>
+     <a class="active" href="penyerahan.html">
+      Pengajuan
+     </a>
+     <a href="riwayat.html">
+      Riwayat
+     </a>
+     <a href="profil.html">
+      Profil
+     </a>
+    </nav>
+    <a class="btn btn-light logout" data-logout="" href="login.html">
+     Logout
+    </a>
+   </aside>
+   <main class="main">
+    <div class="topbar simple-topbar">
+     <h1>
+      Pengajuan Penyerahan Limbah
+     </h1>
+    </div>
+    <section class="card">
+     <form id="wasteForm">
+      <div class="submission-columns">
+       <div class="submission-column">
+        <div class="form-group">
+         <label>
+          Jenis Limbah
+         </label>
+         <select id="jenis" required="">
+         </select>
+        </div>
+        <div class="quantity-row">
+         <div class="form-group">
+          <label>
+           Jumlah
+          </label>
+          <input id="jumlah" max="20" min="1" required="" type="number" value="1"/>
+          <small class="field-help" id="quantityHint">
+           Maksimal mengikuti jenis limbah rumah tangga.
+          </small>
+         </div>
+         <div class="form-group">
+          <label>
+           Satuan
+          </label>
+          <input id="satuanDisplay" type="text" readonly value="kotak/wadah keras"/>
+          <input id="satuan" type="hidden" value="kotak/wadah keras"/>
+         </div>
+        </div>
+        <div class="form-group">
+         <label>
+          Jadwal Penyerahan
+         </label>
+         <input id="jadwal" required="" type="date"/>
+         <small class="field-help" id="scheduleHint">
+          Pilih lokasi terlebih dahulu untuk melihat batas jadwal.
+         </small>
+        </div>
+        <div class="form-group">
+         <label>
+          Catatan
+         </label>
+         <input id="catatan" placeholder="Contoh: disimpan dalam wadah tertutup"/>
+        </div>
+        <div class="quantity-note">
+         Catatan: formulir ini hanya untuk limbah medis rumah tangga dalam jumlah kecil, bukan limbah klinik/industri.
+        </div>
+        <button class="btn btn-primary submission-button">
+         Simpan Pengajuan
+        </button>
+       </div>
+       <div class="submission-column">
+        <div class="form-group">
+         <label>
+          Lokasi Penerima
+         </label>
+         <select id="lokasi" required="">
+         </select>
+         <small class="field-help" id="locationFilterHint">
+         </small>
+        </div>
+        <div class="location-detail" id="locationDetail">
+         <span class="muted">
+          Pilih jenis limbah dan lokasi untuk melihat detail.
+         </span>
+        </div>
+       </div>
+      </div>
+     </form>
+    </section>
+   </main>
+  </div>
+  <script src="../../js/data.js">
+  </script>
+  <script src="../../js/auth.js">
+  </script>
+  <script src="../../js/user.js">
+  </script>
+ </body>
+</html>

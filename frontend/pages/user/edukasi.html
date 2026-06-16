@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edukasi - MedWaste</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body class="user-theme">
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo">MW</div>
+        <div>
+          <h2 data-user-name>Pengguna</h2>
+          <small>MedWaste</small>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a class="active" href="edukasi.html">Edukasi</a>
+        <a href="penyerahan.html">Pengajuan</a>
+        <a href="riwayat.html">Riwayat</a>
+        <a href="profil.html">Profil</a>
+      </nav>
+      <a class="btn btn-light logout" href="login.html" data-logout>Logout</a>
+    </aside>
+
+    <main class="main">
+      <div class="topbar simple-topbar">
+        <h1>Edukasi</h1>
+      </div>
+      <div class="filter-row" id="articleFilters"></div>
+      <section class="grid grid-2" id="articles"></section>
+    </main>
+  </div>
+
+  <script src="../../js/data.js"></script>
+  <script src="../../js/auth.js"></script>
+  <script src="../../js/user.js"></script>
+</body>
+</html>
