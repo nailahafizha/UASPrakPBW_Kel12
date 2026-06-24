@@ -496,7 +496,7 @@ tr:last-child td {
     gap:10px
   }
 }
-/* Penyerahan form: two balanced vertical columns */
+
 .submission-columns {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -538,7 +538,7 @@ tr:last-child td {
     gap:20px
   }
 }
-/* Compact location card, matching the original simple design */
+
 .submission-column .location-detail {
   margin:0;
   padding:18px 22px;
@@ -563,7 +563,7 @@ tr:last-child td {
   font-size:14px;
   line-height:1.45;
 }
-/* Improved education card spacing */
+
 .article-card .article-pill {
   display:inline-flex;
   margin-bottom:14px
@@ -575,7 +575,7 @@ tr:last-child td {
 .article-card p {
   margin:0
 }
-/* Submission enhancements */
+
 .field-help {
   display:block;
   margin-top:7px;
@@ -672,7 +672,7 @@ tr:last-child td {
 .timeline-step.active:not(:last-child)::after {
   background:var(--blue)
 }
-/* Admin location fields */
+
 .checkbox-grid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -732,7 +732,7 @@ tr:last-child td {
     font-size:10px
   }
 }
-/* Dashboard user refresh */
+
 .dashboard-main {
   padding-top:34px
 }
@@ -893,7 +893,7 @@ tr:last-child td {
     min-height:auto
   }
 }
-/* Elegant color refinement */
+
 body {
   background:radial-gradient(circle at top left,rgba(237,247,250,.9),transparent 34%),var(--bg)
 }
@@ -932,9 +932,7 @@ body {
 .form-group input:invalid {
   border-color:#d7a19c
 }
-/* ==========================
-POLISHED THEME OVERRIDES
-========================== */
+
 .sidebar .brand h2,
 .sidebar .brand small {
   color: #ffffff;
@@ -957,11 +955,6 @@ POLISHED THEME OVERRIDES
   background: var(--blue-dark);
 }
 
-
-/* =========================================================
-   FINAL THEME REFINEMENT
-   User = blue, Admin = brown/yellow
-   ========================================================= */
 :root {
   --user-primary: #1f5f9f;
   --user-primary-dark: #113f6f;
@@ -1049,7 +1042,6 @@ body.user-theme th {
   color: var(--user-primary-dark);
 }
 
-/* Login spacing fix */
 .auth-card .brand {
   align-items: center;
   gap: 16px;
@@ -1067,7 +1059,6 @@ body.user-theme th {
   line-height: 1.35;
 }
 
-/* Make table sections breathe below the input card */
 .card + .table-wrap {
   margin-top: 24px;
 }
@@ -1084,7 +1075,6 @@ body.user-theme .table-wrap {
   border-color: #d4e7f7;
 }
 
-/* Cleaner admin CRUD pages */
 body.admin-theme .card,
 body.admin-theme .table-wrap {
   box-shadow: 0 14px 30px rgba(106, 63, 28, .08);
@@ -1095,9 +1085,6 @@ body.user-theme .table-wrap {
   box-shadow: 0 14px 30px rgba(15, 66, 110, .08);
 }
 
-/* =====================================================
-   FINAL THEME REVISIONS - MedWaste
-   ===================================================== */
 :root {
   --user-bg:#eef7fc;
   --user-primary:#1f5f9d;
@@ -1308,7 +1295,6 @@ body.admin-theme {
   line-height:1.65;
 }
 
-/* Admin dashboard like the requested reference */
 .admin-dashboard .page-header {
   margin-bottom:24px;
 }
@@ -1459,8 +1445,6 @@ body.admin-theme {
   }
 }
 
-
-/* Revisi tambahan */
 .profile-layout {
   display:grid;
   grid-template-columns:1fr;
@@ -1497,8 +1481,6 @@ body.admin-theme {
   }
 }
 
-
-/* Revisi UX: artikel ringkas, modal scroll, dan input lokasi */
 .modal {
   align-items:start;
   overscroll-behavior:contain;
@@ -1553,8 +1535,6 @@ body.admin-theme {
   letter-spacing:.02em;
 }
 
-
-/* Validasi hari dan jam operasional lokasi */
 .day-checkbox-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -1590,8 +1570,6 @@ body.admin-theme {
   }
 }
 
-
-/* Hari operasional compact dropdown */
 .multi-select{
   position:relative;
 }
@@ -1653,10 +1631,6 @@ body.admin-theme {
   accent-color:var(--blue);
 }
 
-
-/* =====================================================
-   PERBAIKAN TABEL KELOLA PENYERAHAN ADMIN
-   ===================================================== */
 .admin-submission-table {
   min-width: 880px;
   table-layout: fixed;
@@ -1725,13 +1699,6 @@ body.admin-theme {
   }
 }
 
-
-/* =====================================================
-   RESPONSIVE FIX - KELOLA DAFTAR PENYERAHAN ADMIN
-   Card mengikuti lebar area konten seperti halaman admin lain,
-   sedangkan tabel yang lebar scroll di dalam card, bukan membuat
-   halaman melebar ke kanan.
-   ===================================================== */
 .admin-submission-page {
   overflow-x: hidden;
 }
@@ -1825,5 +1792,159 @@ body.admin-theme {
   .admin-submission-page .section-head-inline {
     align-items: flex-start;
     gap: 14px;
+  }
+}
+.mobile-menu-btn,
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .layout {
+    display: block;
+  }
+
+  .main,
+  .admin-submission-page .admin-submission-main {
+    margin-left: 0;
+    padding: 78px 18px 22px;
+    width: 100%;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    border-bottom: 0;
+  }
+
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 25, 35, .45);
+    z-index: 900;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+
+  body.sidebar-open .sidebar-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.mobile-menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  width: 52px;
+  height: 52px;
+  z-index: 1200;
+  border: 0;
+  border-radius: 14px;
+  padding: 0;
+  background: var(--blue-dark);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+}
+
+  .admin-theme .mobile-menu-btn {
+    background: var(--admin-primary-dark);
+  }
+
+  .topbar h1,
+  .simple-topbar h1,
+  .dashboard-heading h1 {
+    font-size: 26px;
+  }
+
+  .auth-card {
+    padding: 24px;
+  }
+
+  .auth-brand h1 {
+    font-size: 30px;
+  }
+
+  .auth-brand .subtitle {
+    font-size: 15px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-symbol {
+    display: none;
+  }
+
+  .table-card,
+  .table-wrap,
+  .inner-table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 720px;
+  }
+}
+
+@media (max-width: 520px) {
+  .main,
+  .admin-submission-page .admin-submission-main {
+    padding: 74px 14px 18px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .hero {
+    padding: 22px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .auth-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-actions,
+  .modal-actions {
+    flex-direction: column;
   }
 }
