@@ -306,3 +306,38 @@ function mapSubmissionFromApi(item) {
     createdAt: item.created_at
   };
 }
+
+function initResponsiveSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar) return;
+
+  const button = document.createElement('button');
+  button.className = 'mobile-menu-btn';
+  button.type = 'button';
+  button.innerHTML = '☰';
+
+  const overlay = document.createElement('div');
+  overlay.className = 'sidebar-overlay';
+
+  document.body.appendChild(button);
+  document.body.appendChild(overlay);
+
+  function closeSidebar() {
+    document.body.classList.remove('sidebar-open');
+    button.innerHTML = '☰';
+  }
+
+  function toggleSidebar() {
+    document.body.classList.toggle('sidebar-open');
+    button.innerHTML = document.body.classList.contains('sidebar-open') ? '✕' : '☰';
+  }
+
+  button.addEventListener('click', toggleSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeSidebar);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initResponsiveSidebar);
